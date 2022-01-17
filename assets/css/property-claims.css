@@ -1,0 +1,214 @@
+.section-padding {
+    padding: 80px 0;
+}
+
+.header1-bg {
+    background: #E0F0FC;
+    margin-bottom: 50px;
+}
+
+.property-hero {
+    width: auto;
+    height: auto;
+    margin: 100px 0;
+}
+
+.hero-text {
+    position: static;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.heading.lost-and-found,
+.platform-title,
+.cta-title {
+
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 55px;
+    line-height: 1.30em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #3a3b3c;
+    line-height: 1.2;
+    letter-spacing: -.9px;
+    text-align: center;
+}
+
+.header2-bg {
+    padding-bottom: 50px;
+}
+
+.header1-bg,
+.header2-bg,
+.header3-bg,
+.header4-bg,
+.header5-bg,
+.header6-bg,
+.header7-bg {
+    border-bottom: 1px solid #eeecec;
+}
+
+/* simple solution  */
+
+.images {
+    margin-top: 200px;
+}
+
+.heading-2 {
+    margin-bottom: 67px;
+    font-size: 48px;
+    line-height: 1.13em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.image-8 {
+    margin-bottom: 20px;
+    margin-left: 149px;
+}
+
+.solution-num {
+    color: #1dbf73;
+}
+
+.solution-step {
+    text-align: left;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    transition: .3s;
+    /*! box-shadow: 0 1px 2px rgb(0 0 0 / 10%); */
+}
+
+.solution-step:hover .solution-text {
+    color: #1dbf73;
+    transition: .3s;
+}
+
+.solution-step:hover .solution-num {
+    color: #05152F;
+    transition: .3s;
+}
+
+/* .header1-bg {
+    background-image: url('https://assets.website-files.com/5fe22b52285ac81c0bafbab6/5ff742ee5e60adf0511d17df_yellow-blob-1.svg ');
+    background-size: cover;
+    background-position: left;
+} */
+
+/* Check list item  */
+.image-responsive {
+    width: 100%;
+}
+
+.save_list {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+.save-platform-item {
+    overflow: visible;
+    padding: 0px 51px 20px;
+    background-image: url("https://assets.website-files.com/5fe22b52285ac81c0bafbab6/5ff4c3c62d2ad11b77d5a561_checkmark.svg");
+    background-position: 0% 0%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.buttons-header {
+    margin-top: 15px;
+}
+
+
+/* platform overview */
+.div-block-4.light-shadow {
+    width: auto;
+    height: auto;
+    max-width: 1166px;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.div-block-4 {
+    width: 1166px;
+    height: 391px;
+    max-height: none;
+    max-width: none;
+    margin-top: 69px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.list.features-list {
+    display: -ms-grid;
+    display: grid;
+    padding: 77px 36px 62px 78px;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 29px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto auto;
+    grid-template-rows: auto auto auto;
+    list-style-type: disc;
+}
+
+.platform-item.plt-list {
+    padding-bottom: 0px;
+    padding-left: 32px;
+    background-image: url("https://assets.website-files.com/5fe22b52285ac81c0bafbab6/5ff615ceb7f6b2fd27d03c18_bullet-purple.svg");
+    background-position: 0% 20%;
+    background-size: auto;
+    font-size: 23px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.platform-item {
+    overflow: visible;
+    padding: 0px 51px 20px;
+    background-image: url("https://assets.website-files.com/5fe22b52285ac81c0bafbab6/5ff4c3c62d2ad11b77d5a561_checkmark.svg");
+    background-position: 0% 0%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.platform-item {
+    padding-bottom: 10px;
+    padding-left: 59px;
+    background-image: url("https://assets.website-files.com/5fe22b52285ac81c0bafbab6/5ff4c3c62d2ad11b77d5a561_checkmark.svg");
+    background-position: 0px 0px;
+    background-size: auto;
+    font-weight: 500;
+    list-style-type: none;
+}
+
+/* Call to action area  */
+.call-to-action.header6-bg.section-padding {
+    padding: 120px 0;
+    background: #E0F0FC;
+}
+
+.paragraph.lost-and-found {
+    font-size: 18px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}

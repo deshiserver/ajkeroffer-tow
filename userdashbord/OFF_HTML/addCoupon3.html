@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Coupon v3</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Common -->
+    <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/themify-icons">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/sidebar.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard_theme_dots.min.css" rel="stylesheet"
+        type="text/css" />
+    <style>
+        body {
+            background-color: #eee
+        }
+
+        .form-control:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25)
+        }
+
+        .btn-secondary:focus {
+            box-shadow: 0 0 0 0rem rgba(108, 117, 125, .5)
+        }
+
+        .close:focus {
+            box-shadow: 0 0 0 0rem rgba(108, 117, 125, .5)
+        }
+
+        .mt-200 {
+            margin-top: 200px
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #6c757d;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da70;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+
+        .btn.btn-secondary.sw-btn-prev,
+        .btn.btn-secondary.sw-btn-next {
+            margin: 0 10px;
+            background: #57cf97;
+            border: #505050;
+            font-weight: bold;
+        }
+
+        .btn.btn-secondary.sw-btn-prev:hover,
+        .btn.btn-secondary.sw-btn-next:hover {
+            background: #000;
+            transition: .1s;
+        }
+
+        .sw-theme-dots>ul.step-anchor>li.done>a {
+            color: #57cf97;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+        <div class="nano">
+            <div class="nano-content">
+                <div class="db-logo"><a href="index.html"> <img src="assets/img/logo/logo.png" alt="" /> </a></div>
+                <ul>
+                    <!-- <span class="badge badge-primary">2</span> -->
+                    <li class="label">Main</li>
+
+                    <!-- Favorities -->
+                    <li><a class="sidebar-sub-toggle"><i class="far fa-heart"></i> Favorities <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="favoritesStore.html"><i class="fas fa-book"></i>Stores</a></li>
+                            <li><a href="favoritesCoupon.html"><i class="fas fa-ticket-alt"></i>Coupons</a></li>
+                            <li><a href="favoritesProduct.html"><i class="fas fa-cart-plus"></i>Product</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Saved -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-star"></i> Saved <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="savedStore.html"><i class="fas fa-book"></i>Stores</a></li>
+                            <li><a href="savedCoupon.html"><i class="fas fa-ticket-alt"></i>Coupons</a></li>
+                            <li><a href="savedProduct.html"><i class="fas fa-cart-plus"></i>Product</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Rewards -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-gift"></i> Rewards <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="rewards.html"><i class="fas fa-gifts"></i>Rewards</a></li>
+                            <li><a href="rewardsRequest.html"><i class="fas fa-hand-holding-heart"></i>Rewards
+                                    Reqest</a></li>
+                        </ul>
+                    </li>
+                    <!-- My Store -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-store"></i> My Stores <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="addStore.html"><i class="fas fa-plus"></i>Add</a></li>
+                            <li><a href="viewStore.html"><i class="fas fa-th-list"></i>View</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- My Coupons -->
+
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-ticket-alt"></i> My Coupons <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a type="button" data-toggle="modal" data-target="#exampleModal" href=""><i
+                                        class="fas fa-plus"></i>Add</a></li>
+
+                            <li><a href="viewCoupon.html"><i class="fas fa-th-list"></i>View</a></li>
+                        </ul>
+                    </li>
+                    <!-- My Products -->
+                    <li><a class="sidebar-sub-toggle"><i class="fab fa-product-hunt"></i> My Products <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="addProduct.html"><i class="fas fa-plus"></i>Add</a></li>
+                            <li><a href="viewProduct.html"><i class="fas fa-th-list"></i>View</a></li>
+                        </ul>
+                    </li>
+                    <!-- Advertisement -->
+                    <li><a class="sidebar-sub-toggle"><i class="fab fa-buysellads"></i> Advertisement <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="buyPackage.html"><i class="fas fa-plus"></i>Buy Package</a></li>
+                            <li><a href="myAdd.html"><i class="fas fa-th-list"></i>My Ads</a></li>
+                        </ul>
+                    </li>
+                    <!-- Refer a Friend -->
+                    <li><a href="referFriend.html"><i class="fas fa-asterisk"></i> Refer a Friend </a></li>
+                    <!-- Extra -->
+                    <li class="label">Extra</li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="far fa-dot-circle"></i> Pages <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="../signin.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                            <li><a href="../signup.html"><i class="far fa-registered"></i>Register</a></li>
+                            <li><a href="edit-profile.html"><i class="far fa-edit"></i>Edit Profile</a></li>
+                            <li><a href="changePassword.html"><i class="fas fa-lock-open"></i>Change password</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar -->
+
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="float-right">
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="fas fa-bell"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Recent Notifications</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">5 members joined today </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mariam</div>
+                                                        <div class="notification-text">likes a photo of you</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Tasnim</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="fas fa-envelope"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">2 New Messages</span>
+                                        <a href="email.html">
+                                            <i class="ti-pencil-alt pull-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/1.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">AjikerOffer
+                                    <i class="fas fa-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Upgrade Now</span>
+                                        <p class="trial-day">30 Days Trail</p>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="far fa-user"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fas fa-envelope"></i>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fas fa-sliders-h"></i>
+                                                    <span>Setting</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-lock"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="far fa-times-circle"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 offset-3 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            
+                            <!-- Coupon form 2  -->
+                            <!-- Modal form Start -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <!-- <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Please add your coupon...
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div> -->
+                                        <div class="modal-body">
+                                            <div id="smartwizard">
+                                                <ul>
+                                                    <li><a href="#step-1">Step 1<br /><small>Basic Info</small></a></li>
+                                                    <li><a href="#step-2">Step 2<br /><small>File and Tag</small></a>
+                                                    </li>
+                                                    <li><a href="#step-3">Step 3<br /><small>Submit</small></a></li>
+
+                                                    <!-- <li><a href="#step-4">Step 4<br /><small>Step Name</small></a></li> -->
+                                                </ul>
+                                                <div>
+                                                    <!-- step 1 -->
+                                                    <div id="step-1">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Coupon Name" required>
+
+
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <input type="number" class="form-control"
+                                                                    placeholder="Coupon Code" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">
+                                                                <select name="" id="" class="custom-select form-control"
+                                                                    data-switch-store="">
+                                                                    <option selected>Add To..</option>
+                                                                    <option value="3" isphysical="" sellonline="1">
+                                                                        Adidas</option>
+                                                                    <option value="8" isphysical="" sellonline="1">
+                                                                        Levi's</option>
+                                                                    <option value="9" isphysical="" sellonline="1">Amar
+                                                                        Outlet</option>
+                                                                    <option value="11" isphysical="" sellonline="1">
+                                                                        Daraz.com.BD</option>
+                                                                    <option value="25" isphysical="" sellonline="1">Food
+                                                                        Panda BD</option>
+                                                                    <option value="26" isphysical="" sellonline="1">
+                                                                        Evaly</option>
+                                                                    <option value="27" isphysical="" sellonline="1">BD
+                                                                        Shop</option>
+                                                                    <option value="29" isphysical="" sellonline="1">
+                                                                        Bagdoom.com</option>
+                                                                    <option value="30" isphysical="" sellonline="1">
+                                                                        Pickaboo</option>
+
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <select name="" class="custom-select form-control"
+                                                                    id="">
+                                                                    <optgroup label="Clothing">
+                                                                        <option value="2">Clothing</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="FOOD">
+                                                                        <option value="3">FOOD</option>
+                                                                        <option value="12">restaurant</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="eCommerce">
+                                                                        <option value="4">eCommerce</option>
+                                                                        <option value="9">PC Build</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Electronics">
+                                                                        <option value="5">Electronics</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Mall">
+                                                                        <option value="6">Mall</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Street">
+                                                                        <option value="7">Street</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Telecommunications company">
+                                                                        <option value="8">Telecommunications company
+                                                                        </option>
+                                                                    </optgroup>
+                                                                    <optgroup label="GROCERY">
+                                                                        <option value="10">GROCERY</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="HEALTHCARE">
+                                                                        <option value="11">HEALTHCARE</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">
+                                                                <div>
+                                                                    <input class="form-control" type="date" name=""
+                                                                        placeholder="Start Date"
+                                                                        id="submit_coupon_form[start]"
+                                                                        value="Start Date"
+                                                                        style="width:100%;margin-right:1%;">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <input class="form-control" type="time"
+                                                                    name="submit_coupon_form[start_hour]" value="00:00"
+                                                                    style="width: 100%">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">
+                                                                <input class="form-control" type="date"
+                                                                    name="submit_coupon_form[end]"
+                                                                    id="submit_coupon_form[end]" value=""
+                                                                    style="width:100%;margin-right:1%;">
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <input class="form-control" type="time"
+                                                                    name="submit_coupon_form[start_hour]" value="00:00"
+                                                                    style="width: 100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Step 2  -->
+                                                    <div id="step-2">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <input class="form-control" type="file"
+                                                                    name="submit_coupon_form_image"
+                                                                    id="submit_coupon_form_image">
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Coupon Url" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-6">
+                                                                <textarea placeholder="Description" class="form-control"
+                                                                    rows="5" id="comment"></textarea>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <textarea placeholder="Tag , ajkeroffer, amarabedon"
+                                                                    class="form-control" rows="5" id="tag"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Step 3  -->
+                                                    <div id="step-3" class="">
+                                                        <button class="btn btn-success"> Submit Coupon</button>
+                                                    </div>
+                                                    <!-- Step 4  -->
+                                                    <!-- <div id="step-4" class="">
+                                    <div class="row">
+                                        <div class="col-md-12"> <span>Thanks For submitting your details with
+                                                BBBootstrap.com. we will send you a confirmation email. We will review
+                                                your
+                                                details and revert back.</span> </div>
+                                    </div>
+                                </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal form end  -->
+
+                            <!-- Coupon foprm 2  -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.nanoscroller.min.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/activeMenu.js"></script>
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.smartWizard.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('#smartwizard').smartWizard({
+                selected: 0,
+                theme: 'dots',
+                autoAdjustHeight: true,
+                transitionEffect: 'fade',
+                showStepURLhash: false,
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Favorites Store </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Common -->
+    <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/themify-icons">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/sidebar.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+        <div class="nano">
+            <div class="nano-content">
+                <div class="db-logo"><a href="index.html"> <img src="assets/img/logo/logo.png" alt="" /> </a></div>
+                <ul>
+                    <!-- <span class="badge badge-primary">2</span> -->
+                    <li class="label">Main</li>
+
+                    <!-- Favorities -->
+                    <li><a class="sidebar-sub-toggle"><i class="far fa-heart"></i> Favorities <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="favoritesStore.html"><i class="fas fa-book"></i>Stores</a></li>
+                            <li><a href="favoritesCoupon.html"><i class="fas fa-ticket-alt"></i>Coupons</a></li>
+                            <li><a href="favoritesProduct.html"><i class="fas fa-cart-plus"></i>Product</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Saved -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-star"></i> Saved <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="savedStore.html"><i class="fas fa-book"></i>Stores</a></li>
+                            <li><a href="savedCoupon.html"><i class="fas fa-ticket-alt"></i>Coupons</a></li>
+                            <li><a href="savedProduct.html"><i class="fas fa-cart-plus"></i>Product</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Rewards -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-gift"></i> Rewards <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="rewards.html"><i class="fas fa-gifts"></i>Rewards</a></li>
+                            <li><a href="rewardsRequest.html"><i class="fas fa-hand-holding-heart"></i>Rewards
+                                    Reqest</a></li>
+                        </ul>
+                    </li>
+                    <!-- My Store -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-store"></i> My Stores <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="addStore.html"><i class="fas fa-plus"></i>Add</a></li>
+                            <li><a href="viewStore.html"><i class="fas fa-th-list"></i>View</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- My Coupons -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-ticket-alt"></i> My Coupons <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="addCoupon.html"><i class="fas fa-plus"></i>Add</a></li>
+                            <li><a href="viewCoupon.html"><i class="fas fa-th-list"></i>View</a></li>
+                        </ul>
+                    </li>
+                    <!-- My Products -->
+                    <li><a class="sidebar-sub-toggle"><i class="fab fa-product-hunt"></i> My Products <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="addProduct.html"><i class="fas fa-plus"></i>Add</a></li>
+                            <li><a href="viewProduct.html"><i class="fas fa-th-list"></i>View</a></li>
+                        </ul>
+                    </li>
+                    <!-- Advertisement -->
+                    <li><a class="sidebar-sub-toggle"><i class="fab fa-buysellads"></i> Advertisement <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="buyPackage.html"><i class="fas fa-plus"></i>Buy Package</a></li>
+                            <li><a href="myAdd.html"><i class="fas fa-th-list"></i>My Ads</a></li>
+                        </ul>
+                    </li>
+                    <!-- Refer a Friend -->
+                    <li><a href="referFriend.html"><i class="fas fa-asterisk"></i> Refer a Friend </a></li>
+                    <!-- Extra -->
+                    <li class="label">Extra</li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="far fa-dot-circle"></i> Pages <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="../signin.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                            <li><a href="../signup.html"><i class="far fa-registered"></i>Register</a></li>
+                            <li><a href="edit-profile.html"><i class="far fa-edit"></i>Edit Profile</a></li>
+                            <li><a href="changePassword.html"><i class="fas fa-lock-open"></i>Change password</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar -->
+
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="float-right">
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="fas fa-bell"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Recent Notifications</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">5 members joined today </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mariam</div>
+                                                        <div class="notification-text">likes a photo of you</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Tasnim</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="fas fa-envelope"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">2 New Messages</span>
+                                        <a href="email.html">
+                                            <i class="ti-pencil-alt pull-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/1.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">AjikerOffer
+                                    <i class="fas fa-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Upgrade Now</span>
+                                        <p class="trial-day">30 Days Trail</p>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="far fa-user"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fas fa-envelope"></i>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fas fa-sliders-h"></i>
+                                                    <span>Setting</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-lock"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="far fa-times-circle"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                   <div class="col-lg-9 p-r-0 title-margin-right">
+                       <div class="page-header">
+                           <div class="page-title">
+                               <h3 class="mb-3 mt-3">Favorites Coupon</h3>
+                           </div>
+                           <!-- View Coupon   -->
+
+                           <!-- 2 -->
+                           <div class="ao-dyn-item item-list ao-item premium-post animated growIn go" data-id="1">
+                               <div class="ao-post-card">
+                                   <a href="" class="ao-inline-block">
+                                       <img class="company-logo ao-o-block" src="assets/img/logo_5f2ee346e7187.jpg"
+                                           alt="StoreLogo">
+                                   </a>
+                                   <div class="ao-o-block-info">
+                                       <div class="job-info-primary">
+                                           <a href="" class="ao-o-block-company-name ao-inline-block">
+                                               <div>AjkerOffer</div>
+                                           </a>
+                                           <a href="" class="ao-o-block-title-link ao-inline-block">
+                                               <h3 class="ao-o-block-title">Food Panda</h3>
+                                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                                                   reiciendis, eos totam
+                                                   repellat velit cumque sint beatae facere voluptates quibusdam
+                                                   repellendus dignissimos
+                                                   eius! Qui, optio.</p>
+                                           </a>
+                                           <div class="ao-o-block-info-bottom">
+                                               <a href="#" class="job-badge card txt-overflow">Resturent</a>
+                                               <div class="ao-o-block-type-container job-badge card txt-overflow">
+
+                                                   <div class="ao-o-block-type-text">20% OFF</div>
+                                               </div>
+                                               <a href="javascript:void(0)" class="ao-o-block-type-container saved-job"
+                                                   data-id="47" id="save-47" style="margin-left: 10px;">
+                                                   <img src="assets/img/save-svgrepo-com.svg" style="width: 24px;"
+                                                       alt="" class="ao-o-block-type-icon">
+                                               </a>
+                                               <a class="ao-o-block-type-container email-job" data-toggle="modal"
+                                                   data-id="26" href="#sendByEmail" rel="modal:open" id="email-26"
+                                                   style="margin-left: 10px;">
+                                                   <img src="assets/img/share-svgrepo-com.svg" style="width: 24px;"
+                                                       alt="" class="ao-o-block-type-icon">
+                                               </a>
+                                           </div>
+                                       </div>
+                                       <div class="job-info-secondary">
+                                           <div class="featured-badge">View Code</div>
+                                           <div class="ao-o-block-spacer bdkaj-condition-invisible"></div>
+                                           <div class="ao-o-block-date">
+
+                                               <p> <i class="far fa-clock"></i> November 20, 2021</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- 2 end  -->
+                           <!-- 3 -->
+                           <div class="ao-dyn-item item-list ao-item premium-post animated growIn go" data-id="1">
+                               <div class="ao-post-card">
+                                   <a href="" class="ao-inline-block">
+                                       <img class="company-logo ao-o-block" src="assets/img/logo_5f2ee346e7187.jpg"
+                                           alt="StoreLogo">
+                                   </a>
+                                   <div class="ao-o-block-info">
+                                       <div class="job-info-primary">
+                                           <a href="" class="ao-o-block-company-name ao-inline-block">
+                                               <div>AjkerOffer</div>
+                                           </a>
+                                           <a href="" class="ao-o-block-title-link ao-inline-block">
+                                               <h3 class="ao-o-block-title">Food Panda</h3>
+                                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                                                   reiciendis, eos totam repellat
+                                                   velit cumque sint beatae facere voluptates quibusdam repellendus
+                                                   dignissimos eius! Qui, optio.
+                                               </p>
+                                           </a>
+                                           <div class="ao-o-block-info-bottom">
+                                               <a href="#" class="job-badge card txt-overflow">Resturent</a>
+                                               <div class="ao-o-block-type-container job-badge card txt-overflow">
+
+                                                   <div class="ao-o-block-type-text">20% OFF</div>
+                                               </div>
+                                               <a href="javascript:void(0)" class="ao-o-block-type-container saved-job"
+                                                   data-id="47" id="save-47" style="margin-left: 10px;">
+                                                   <img src="assets/img/save-svgrepo-com.svg" style="width: 24px;"
+                                                       alt="" class="ao-o-block-type-icon">
+                                               </a>
+                                               <a class="ao-o-block-type-container email-job" data-toggle="modal"
+                                                   data-id="26" href="#sendByEmail" rel="modal:open" id="email-26"
+                                                   style="margin-left: 10px;">
+                                                   <img src="assets/img/share-svgrepo-com.svg" style="width: 24px;"
+                                                       alt="" class="ao-o-block-type-icon">
+                                               </a>
+                                           </div>
+                                       </div>
+                                       <div class="job-info-secondary">
+                                           <div class="featured-badge">View Code</div>
+                                           <div class="ao-o-block-spacer bdkaj-condition-invisible"></div>
+                                           <div class="ao-o-block-date">
+                                               <p> <i class="far fa-clock"></i> November 20, 2021</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- 3 end  -->
+                           <!-- 4 -->
+                           <div class="ao-dyn-item item-list ao-item premium-post animated growIn go" data-id="1">
+                               <div class="ao-post-card">
+                                   <a href="" class="ao-inline-block">
+                                       <img class="company-logo ao-o-block" src="assets/img/logo_5f2ee346e7187.jpg"
+                                           alt="StoreLogo">
+                                   </a>
+                                   <div class="ao-o-block-info">
+                                       <div class="job-info-primary">
+                                           <a href="" class="ao-o-block-company-name ao-inline-block">
+                                               <div>AjkerOffer</div>
+                                           </a>
+                                           <a href="" class="ao-o-block-title-link ao-inline-block">
+                                               <h3 class="ao-o-block-title">Food Panda</h3>
+                                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                                                   reiciendis, eos totam repellat velit cumque sint beatae facere
+                                                   voluptates quibusdam repellendus dignissimos eius! Qui, optio.</p>
+                                           </a>
+                                           <div class="ao-o-block-info-bottom">
+                                               <a href="#" class="job-badge card txt-overflow">Resturent</a>
+                                               <div class="ao-o-block-type-container job-badge card txt-overflow">
+
+                                                   <div class="ao-o-block-type-text">20% OFF</div>
+                                               </div>
+                                               <a href="javascript:void(0)" class="ao-o-block-type-container saved-job"
+                                                   data-id="47" id="save-47" style="margin-left: 10px;">
+                                                   <img src="assets/img/save-svgrepo-com.svg" style="width: 24px;"
+                                                       alt="" class="ao-o-block-type-icon">
+                                               </a>
+                                               <a class="ao-o-block-type-container email-job" data-toggle="modal"
+                                                   data-id="26" href="#sendByEmail" rel="modal:open" id="email-26"
+                                                   style="margin-left: 10px;">
+                                                   <img src="assets/img/share-svgrepo-com.svg" style="width: 24px;"
+                                                       alt="" class="ao-o-block-type-icon">
+                                               </a>
+                                           </div>
+                                       </div>
+                                       <div class="job-info-secondary">
+                                           <div class="featured-badge">View Code</div>
+                                           <div class="ao-o-block-spacer bdkaj-condition-invisible"></div>
+                                           <div class="ao-o-block-date">
+                                               <p> <i class="far fa-clock"></i> November 20, 2021</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- 4 end  -->
+                           <!-- View Coupon  -->
+                       </div>
+                   </div>
+                   <div class="col-md-3">
+                       <div class="section-ads-area">
+                           <img class="img-fluid" src="assets/img/add.png" alt="">
+
+                           <img class="img-fluid" src="assets/img/add.png" alt="">
+
+
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.nanoscroller.min.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/activeMenu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Coupon</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Common -->
+    <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/themify-icons">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/sidebar.css" rel="stylesheet">
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="assets/css/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/form.css">
+
+    <!-- Modal css  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Modal css  -->
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+        <div class="nano">
+            <div class="nano-content">
+                <div class="db-logo"><a href="index.html"> <img src="assets/img/logo/logo.png" alt="" /> </a></div>
+                <ul>
+                    <!-- <span class="badge badge-primary">2</span> -->
+                    <li class="label">Main</li>
+
+                    <!-- Favorities -->
+                    <li><a class="sidebar-sub-toggle"><i class="far fa-heart"></i> Favorities <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="favoritesStore.html"><i class="fas fa-book"></i>Stores</a></li>
+                            <li><a href="favoritesCoupon.html"><i class="fas fa-ticket-alt"></i>Coupons</a></li>
+                            <li><a href="favoritesProduct.html"><i class="fas fa-cart-plus"></i>Product</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Saved -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-star"></i> Saved <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="savedStore.html"><i class="fas fa-book"></i>Stores</a></li>
+                            <li><a href="savedCoupon.html"><i class="fas fa-ticket-alt"></i>Coupons</a></li>
+                            <li><a href="savedProduct.html"><i class="fas fa-cart-plus"></i>Product</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Rewards -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-gift"></i> Rewards <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="rewards.html"><i class="fas fa-gifts"></i>Rewards</a></li>
+                            <li><a href="rewardsRequest.html"><i class="fas fa-hand-holding-heart"></i>Rewards
+                                    Reqest</a></li>
+                        </ul>
+                    </li>
+                    <!-- My Store -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-store"></i> My Stores <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="addStore.html"><i class="fas fa-plus"></i>Add</a></li>
+                            <li><a href="viewStore.html"><i class="fas fa-th-list"></i>View</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- My Coupons -->
+                    <li><a class="sidebar-sub-toggle"><i class="fas fa-ticket-alt"></i> My Coupons <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="addCoupon.html"><i class="fas fa-plus"></i>Add</a></li>
+                            <li><a href="viewCoupon.html"><i class="fas fa-th-list"></i>View</a></li>
+                        </ul>
+                    </li>
+                    <!-- My Products -->
+                    <li><a class="sidebar-sub-toggle"><i class="fab fa-product-hunt"></i> My Products <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="addProduct.html"><i class="fas fa-plus"></i>Add</a></li>
+                            <li><a href="viewProduct.html"><i class="fas fa-th-list"></i>View</a></li>
+                        </ul>
+                    </li>
+                    <!-- Advertisement -->
+                    <li><a class="sidebar-sub-toggle"><i class="fab fa-buysellads"></i> Advertisement <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="buyPackage.html"><i class="fas fa-plus"></i>Buy Package</a></li>
+                            <li><a href="myAdd.html"><i class="fas fa-th-list"></i>My Ads</a></li>
+                        </ul>
+                    </li>
+                    <!-- Refer a Friend -->
+                    <li><a href="referFriend.html"><i class="fas fa-asterisk"></i> Refer a Friend </a></li>
+                    <!-- Extra -->
+                    <li class="label">Extra</li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="far fa-dot-circle"></i> Pages <span
+                                class="sidebar-collapse-icon fas fa-angle-down"></span></a>
+                        <ul>
+                            <li><a href="../signin.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                            <li><a href="../signup.html"><i class="far fa-registered"></i>Register</a></li>
+                            <li><a href="edit-profile.html"><i class="far fa-edit"></i>Edit Profile</a></li>
+                            <li><a href="changePassword.html"><i class="fas fa-lock-open"></i>Change password</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar -->
+
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="float-right">
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="fas fa-bell"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Recent Notifications</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">5 members joined today </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mariam</div>
+                                                        <div class="notification-text">likes a photo of you</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Tasnim</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="fas fa-envelope"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">2 New Messages</span>
+                                        <a href="email.html">
+                                            <i class="ti-pencil-alt pull-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/1.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. AjikerOffer</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">AjikerOffer
+                                    <i class="fas fa-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Upgrade Now</span>
+                                        <p class="trial-day">30 Days Trail</p>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="far fa-user"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fas fa-envelope"></i>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fas fa-sliders-h"></i>
+                                                    <span>Setting</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-lock"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="far fa-times-circle"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+
+
+                        <form class="steps" accept-charset="UTF-8" enctype="multipart/form-data" novalidate="">
+                            <!-- <ul id="progressbar">
+                                <li class="active">User Information</li>
+                                <li>Aquisition</li>
+                                <li>Cultivation</li>
+                                <li>Cultivation2</li>
+                                <li>Retention</li>
+                            </ul> -->
+
+
+
+                            <!-- USER INFORMATION FIELD SET -->
+                            <fieldset>
+                                <h2 class="fs-title">Basic Information</h2>
+                                <h3 class="fs-subtitle">We just need some basic information to begin your scoring</h3>
+
+                                <!-- new  -->
+
+                                <!-- new  -->
+
+                                <!-- Add Too -->
+
+
+
+                                <!-- 
+                                <div class="drop">
+                                    <div class="option active placeholder" data-value="placeholder">
+                                        Add To..
+                                    </div>
+                                    <div class="option" data-value="wow">
+                                        Wow!
+                                    </div>
+                                    <div class="option" data-value="drop">
+                                        So dropdown!
+                                    </div>
+                                    <div class="option" data-value="select">
+                                        Very select!
+                                    </div>
+                                    <div class="option" data-value="custom">
+                                        Much custom!
+                                    </div>
+                                    <div class="option" data-value="animation">
+                                        Such animation!
+                                    </div>
+                                </div>
+                                -->
+
+                                <select name="cars " class=" drop form-control">
+                                    <option selected>Custom Select Menu</option>
+
+                                    <option class="option" value="volvo">Volvo</option>
+                                    <option value="fiat">Fiat</option>
+                                    <option value="audi">Audi</option>
+
+
+                                </select>
+
+                                <input required class="form-control mt-4" type="text" name="submit_coupon_form[name]"
+                                    id="submit_coupon_form[name]" value="" maxlength="255" placeholder="Coupon name"
+                                    required="">
+
+
+
+                                <!-- Begin What's Your Email Field -->
+
+                                <input class="form-control" type="text" name="submit_coupon_form[code]"
+                                    id="submit_coupon_form[code]" value=""
+                                    placeholder="Coupon code, please leave it blank if not necessary.">
+
+                                <input class="form-control" type="text" name="submit_coupon_form[code]"
+                                    id="submit_coupon_form[code]" value=""
+                                    placeholder="Coupon code, please leave it blank if not necessary.">
+
+
+                                <input type="button" data-page="1" name="next" class="next action-button"
+                                    value="Next" />
+                                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3"><i
+                                        class="question-log fa fa-question-circle"></i> What Is This?</div>
+                            </fieldset>
+
+
+
+                            <!-- ACQUISITION FIELD SET -->
+                            <fieldset>
+                                <h2 class="fs-title">Acquisition of Donors</h2>
+                                <h3 class="fs-subtitle">How have you been doing in acquiring donors?</h3>
+                                <!-- Begin Total Number of Donors in Year 1 Field -->
+                                <div class="form-item webform-component webform-component-textfield hs_total_number_of_donors_in_year_1 field hs-form-field"
+                                    id="webform-component-acquisition--amount-1">
+
+                                    <label
+                                        for="edit-submitted-acquisition-amount-1 total_number_of_donors_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">What
+                                        was your number of total donors in year 1? *</label>
+
+                                    <input id="edit-submitted-acquisition-amount-1" class="form-text hs-input"
+                                        name="total_number_of_donors_in_year_1" required="required" size="60"
+                                        maxlength="128" type="number" value="" placeholder="" data-rule-required="true"
+                                        data-msg-required="Please enter a valid number">
+                                    <span class="error1" style="display: none;">
+                                        <i class="error-log fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <!-- End Total Number of Donors in Year 1 Field -->
+
+                                <!-- Begin Total Number of Donors in Year 2 Field -->
+                                <div class="form-item webform-component webform-component-textfield hs_total_number_of_donors_in_year_2 field hs-form-field"
+                                    id="webform-component-acquisition--amount-2">
+
+                                    <label
+                                        for="edit-submitted-acquisition-amount-2 total_number_of_donors_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">What
+                                        was your number of total donors in year 2? *</label>
+
+                                    <input id="edit-submitted-acquisition-amount-2" class="form-text hs-input"
+                                        name="total_number_of_donors_in_year_2" required="required" size="60"
+                                        maxlength="128" type="number" value="" placeholder="" data-rule-required="true"
+                                        data-msg-required="Please enter a valid number">
+                                    <span class="error1" style="display: none;">
+                                        <i class="error-log fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <!-- End Total Number of Donors in Year 2 Field -->
+
+                                <!-- Begin Calc of Total Number of Donors Fields -->
+                                <!-- THIS FIELD IS NOT EDITABLE | GRAYED OUT -->
+                                <div
+                                    class="form-item webform-component webform-component-textfield webform-container-inline hs_total_donor_percent_change field hs-form-field">
+
+                                    <label
+                                        for="edit-submitted-acquisition-percent-change total_donor_percent_change-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">Total
+                                        Donors Percent Change</label>
+
+                                    <input id="edit-submitted-acquisition-percent-change" class="form-text hs-input"
+                                        name="total_donor_percent_change" readonly="readonly" size="60" maxlength="128"
+                                        type="text" value="" placeholder="0">
+                                </div>
+                                <!-- End Calc of Total Number of Donors Fields -->
+                                <input type="button" data-page="2" name="previous" class="previous action-button"
+                                    value="Previous" />
+                                <input type="button" data-page="2" name="next" class="next action-button"
+                                    value="Next" />
+                                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is
+                                    This?</div>
+                            </fieldset>
+
+
+
+                            <!-- Cultivation FIELD SET -->
+                            <fieldset>
+                                <h2 class="fs-title">Cultivation and Nurturing your Donors</h2>
+                                <h3 class="fs-subtitle">How have you been nurturing donors to get better donations?</h3>
+                                <!-- Begin Average Gift Size in Year 1 Field -->
+                                <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_1 field hs-form-field"
+                                    id="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">
+
+                                    <label
+                                        for="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">What
+                                        was your average gift size in year 1? *</label>
+
+                                    <input id="edit-submitted-cultivation-amount-1" class="form-text hs-input"
+                                        name="average_gift_size_in_year_1" required="required" size="60" maxlength="128"
+                                        type="number" value="" placeholder="" data-rule-required="true"
+                                        data-msg-required="Please enter a valid number">
+                                    <span class="error1" style="display: none;">
+                                        <i class="error-log fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <!-- End Average Gift Size in Year 1 Field -->
+
+                                <!-- Begin Average Gift Size in Year 2 Field -->
+                                <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_2 field hs-form-field"
+                                    id="webform-component-cultivation--amount-2">
+
+                                    <label
+                                        for="edit-submitted-cultivation-amount-2 average_gift_size_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">What
+                                        was your average gift size in year 2? *</label>
+
+                                    <input id="edit-submitted-cultivation-amount-2" class="form-text hs-input"
+                                        name="average_gift_size_in_year_2" required="required" size="60" maxlength="128"
+                                        type="number" value="" placeholder="" data-rule-required="true"
+                                        data-msg-required="Please enter a valid number">
+                                    <span class="error1" style="display: none;">
+                                        <i class="error-log fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <!-- End Average Gift Size in Year 2 Field -->
+
+                                <!-- Begin Average Gift Size Perchent Change Field -->
+                                <!-- THIS FIELD IS NOT EDITABLE | GRAYED OUT -->
+                                <div class="form-item webform-component webform-component-textfield webform-container-inline hs_average_gift_size_percent_change field hs-form-field"
+                                    id="webform-component-cultivation--percent-change1">
+
+                                    <label
+                                        for="edit-submitted-cultivation-percent-change1 average_gift_size_percent_change-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">Average
+                                        Gift Size Percent Change</label>
+
+                                    <input id="edit-submitted-cultivation-percent-change1" class="form-text hs-input"
+                                        name="average_gift_size_percent_change" readonly="readonly" size="60"
+                                        maxlength="128" type="text" value="" placeholder="0">
+                                </div>
+                                <!-- End Average Gift Size Perchent Change Field -->
+                                <input type="button" data-page="3" name="previous" class="previous action-button"
+                                    value="Previous" />
+                                <input type="button" data-page="3" name="next" class="next action-button"
+                                    value="Next" />
+                                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is
+                                    This?</div>
+                            </fieldset>
+
+
+
+                            <!-- Cultivation2 FIELD SET -->
+                            <fieldset>
+                                <h2 class="fs-title">Total Cultivation in Donation</h2>
+                                <h3 class="fs-subtitle">Let's talk about your donations as a whole</h3>
+                                <!-- Begin Total Giving In Year 1 Field -->
+                                <div class="form-item webform-component webform-component-textfield"
+                                    id="webform-component-cultivation--amount-3 hs_total_giving_in_year_1 field hs-form-field">
+
+                                    <label
+                                        for=" edit-submitted-cultivation-amount-3 total_giving_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_4902">What
+                                        was your total giving in Year 1? *</label>
+
+                                    <input id="edit-submitted-cultivation-amount-3" class="form-text hs-input"
+                                        name="total_giving_in_year_1" required="required" size="60" maxlength="128"
+                                        type="number" value="" placeholder="" data-rule-required="true"
+                                        data-msg-required="Please enter a valid number">
+                                    <span class="error1" style="display: none;">
+                                        <i class="error-log fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <!-- End Total Giving In Year 1 Field -->
+
+                                <!-- Begin Total Giving In Year 2 Field -->
+                                <div class="form-item webform-component webform-component-textfield hs_total_giving_in_year_2 field hs-form-field"
+                                    id="webform-component-cultivation--amount-4">
+
+                                    <label
+                                        for=" edit-submitted-cultivation-amount-4 total_giving_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_4902">What
+                                        was your total giving in Year 2? *</label>
+
+                                    <input id="edit-submitted-cultivation-amount-4" class="form-text hs-input"
+                                        name="total_giving_in_year_2" required="required" size="60" maxlength="128"
+                                        type="number" value="" placeholder="" data-rule-required="true"
+                                        data-msg-required="Please enter a valid number">
+                                    <span class="error1" style="display: none;">
+                                        <i class="error-log fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+
+                                <!-- End Total Giving In Year 2 Field -->
+
+                                <!-- Begin Average Gift Size Percent Change Field 2 -->
+                                <!-- THIS FIELD IS NOT EDITABLE | GRAYED OUT -->
+                                <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field"
+                                    id="webform-component-cultivation--percent-change2">
+
+                                    <label
+                                        for=" edit-submitted-cultivation-percent-change2 total_giving_percent_change-99a6d115-5e68-4355-a7d0-529207feb0b3_4902">Average
+                                        Gift Size Percent Change</label>
+
+                                    <input id="edit-submitted-cultivation-percent-change2" class="form-text hs-input"
+                                        name="total_giving_percent_change" readonly="readonly" size="60" maxlength="128"
+                                        type="text" value="" placeholder="0">
+                                </div>
+                                <!-- End Average Gift Size Percent Change Field 2 -->
+                                <input type="button" data-page="4" name="previous" class="previous action-button"
+                                    value="Previous" />
+                                <input type="button" data-page="4" name="next" class="next action-button"
+                                    value="Next" />
+                                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is
+                                    This?</div>
+                            </fieldset>
+
+
+
+                            <!-- RETENTION FIELD SET -->
+                            <fieldset>
+                                <h2 class="fs-title">Retention of your donors</h2>
+                                <h3 class="fs-subtitle">How long can you keep your donors and their donations?</h3>
+                                <!-- Begin Total Number of Donors Who Gave in Year 1 Field -->
+                                <div class="form-item webform-component webform-component-textfield hs_number_of_donors_in_year_1 field hs-form-field"
+                                    id="webform-component-retention--amount-1">
+
+                                    <label
+                                        for=" edit-submitted-retention-amount-1 number_of_donors_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">What
+                                        was your total number of donors who gave in year 1? *</label>
+
+                                    <input id="edit-submitted-retention-amount-1" class="form-text hs-input"
+                                        name="number_of_donors_in_year_1" required="required" size="60" maxlength="128"
+                                        type="number" value="" placeholder="" data-rule-required="true"
+                                        data-msg-required="Please enter a valid number">
+                                    <span class="error1" style="display: none;">
+                                        <i class="error-log fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <!-- End Total Number of Donors Who Gave in Year 1 Field-->
+
+
+                                <!-- Begin Total Number of Donors Who Gave in Year 1 and Year 2 Field -->
+                                <div class="form-item webform-component webform-component-textfield"
+                                    id="webform-component-retention--amount-2 hs_number_of_year_1_donors_who_also_gave_in_year_2 field hs-form-field">
+
+                                    <label
+                                        for=" edit-submitted-retention-amount-2 number_of_year_1_donors_who_also_gave_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">What
+                                        was your total number of donors who gave in year 1 that also gave in year 2?
+                                        *</label>
+
+                                    <input id="edit-submitted-retention-amount-2" class="form-text hs-input"
+                                        name="number_of_year_1_donors_who_also_gave_in_year_2" required="required"
+                                        size="60" maxlength="128" type="number" value="" placeholder=""
+                                        data-rule-required="true" data-msg-required="Please enter a valid number">
+
+                                    <span class="error1" style="display: none;">
+                                        <i class="error-log fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <!-- End Total Number of Donors Who Gave in Year 1 and Year 2 Field -->
+
+                                <!-- Begin Retention Rate Percent -->
+                                <div class="form-item webform-component webform-component-textfield"
+                                    id="webform-component-retention--percent-change field hs-form-field">
+
+                                    <label for="edit-submitted-retention-percent-change">Retention Rate</label>
+
+                                    <input id="edit-submitted-retention-percent-change" class="form-text hs-input"
+                                        name="retention_rate_percent" readonly="readonly" size="60" maxlength="128"
+                                        type="text" value="" placeholder="0">
+
+                                    <span class="error1" style="display: none;">
+                                        <i class="error-log fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+
+                                <!-- End Retention Rate Percent -->
+
+
+                                <!-- Begin Final Calc -->
+                                <div class="form-item webform-component webform-component-textfield hs_fundraising_400_index field hs-form-field"
+                                    id="webform-component-final-grade--grade">
+
+                                    <label
+                                        for=" fundraising_400_index-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">Fundraising
+                                        400
+                                        Index Score</label>
+
+                                    <input id="edit-submitted-final-grade-grade" class="form-text hs-input"
+                                        name="fundraising_400_index" readonly="readonly" size="60" maxlength="128"
+                                        type="text" value="" placeholder="0">
+                                </div>
+                                <!-- End Final Calc -->
+                                <input type="button" data-page="5" name="previous" class="previous action-button"
+                                    value="Previous" />
+                                <input id="submit" class="hs-button primary large action-button next" type="submit"
+                                    value="Submit">
+                                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is
+                                    This?</div>
+                            </fieldset>
+
+                            <fieldset>
+                                <h2 class="fs-title">It's on the way!</h2>
+                                <h3 class="fs-subtitle">Thank you for trying out our marketing grader, please go check
+                                    your email
+                                    for your fundraising report card and some helpful tips to improve it!</h3>
+                                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is
+                                    This?</div>
+                            </fieldset>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Button to Open the Modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    Open modal
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Modal Heading</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                Modal body..
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.nanoscroller.min.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/activeMenu.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="
+    https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script> -->
+
+</body>
+
+</html>
